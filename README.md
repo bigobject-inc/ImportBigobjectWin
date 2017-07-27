@@ -11,7 +11,7 @@ BigObject supports a bunch of interfaces to import data. Please refer to [Data I
 The sample code can be compiled by [Microsoft Visual Studio](https://www.visualstudio.com) 2012 or other versions. It demonstrates two data import interfaces, csv file and [MySQL](https://www.mysql.com) client.
 
 ### Import csv file by Bigobject streaming interface
-Bigobject streaming interface is a proprietary TCP base protocol, please refer to the protocol [detail](http://docs.bigobject.io/Data_Import/Streaming_Bulk_Import.html). The sample code utilizes Windows Sockets API to send TCP packets. Of course, you can use other library to send TCP packets.
+Bigobject streaming interface is a proprietary TCP base protocol, please refer to the protocol [detail](http://docs.bigobject.io/Data_Import/Streaming_Bulk_Import.html). The sample code utilizes Windows Sockets API to send TCP packets. Of course, you can use other library to send TCP packets. For C# developers, you can use [System.Net.Sockets](https://msdn.microsoft.com/zh-tw/library/system.net.sockets.socket(v=vs.110).aspx), [Socket::SendFile](https://msdn.microsoft.com/zh-tw/library/system.net.sockets.socket.sendfile(v=vs.110).aspx) is similar to C++ [TransmitFile](https://msdn.microsoft.com/zh-tw/library/windows/desktop/ms740565(v=vs.85).aspx), except csv header has to be sent in advance.
 
 ### Insert data by MySQL ODBC connector
 To execute SQL statement in the sample code, you've to install [MySQL Connector/ODBC 5.3.9](https://dev.mysql.com/downloads/connector/odbc). Surely, you can use other version, just search "MySQL ODBC 5.3 ANSI Driver" from source code, replace with your MySQL ODBC driver, and re-compile.
